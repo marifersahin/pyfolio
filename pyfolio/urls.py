@@ -17,6 +17,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from entry import views as entry_views
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    
+    url(r'^$', entry_views.entry_list),
+    url(r'^entry/(?P<entry_id>[0-9]+)/$', entry_views.entry_detail),
+    
 ]
