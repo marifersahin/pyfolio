@@ -1,5 +1,17 @@
-<ul>
-{% for entry in entries %} 
-   <li> <a href="{{ entry.get_absolute_url }}" > {{ entry.title }} </a> </li>
-{% endfor %}
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>List of All Entries</title>
+</head>
+
+<body>
+    <ul>
+        {% for entry in entries %}
+        <li> <a href="{{ entry.get_absolute_url }}"> {{ entry.title }} </a> </li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
